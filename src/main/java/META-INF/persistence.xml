@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.1" 
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<persistence-unit name="mysqlJPA" transaction-type="RESOURCE_LOCAL">
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			
+			<!-- 配置数据库连接驱动，这里用mysql的JDBC 的Driver -->
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			
+			<!-- 数据库连接的用户名 -->
+			<property name="hibernate.connection.username" value="root" />
+			
+			<!-- 数据库连接的密码 -->
+			<property name="hibernate.connection.password" value="T$aimeng8964" />
+			
+			<!-- 数据库连接的地址，characterEncoding保证用UTF8属性连接-->
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8" />
+			
+			<!--  -->
+			<property name="hibernate.max_fetch_depth" value="3" />
+			
+			<!-- 配置加载SessionFactory的时候更新表结构，除了update之外可以选择create/create-drop
+			validate 也就是总共有四个属性值可以设置 -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			
+			<!-- 配置自动打印hibernate生成的sql -->
+			<property name="hibernate.show_sql" value="true"/>
+		</properties>
+	</persistence-unit>
+	
+</persistence>
