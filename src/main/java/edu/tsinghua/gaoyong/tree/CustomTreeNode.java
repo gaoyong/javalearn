@@ -224,6 +224,8 @@ public class CustomTreeNode {
 	//TODO 探讨的问题是为何要使用队列 而不使用栈 解决问题
 	//也就是说，当我们遇到算法问题的时候，首先需要考虑的是采用哪一种数据结构来帮助解决问题
 	/**
+	 * 算法要求：层级遍历二叉树，从上到下，从左到右遍历
+	 * 待实现的另一个算法，层级遍历 下到上，从左到右的遍历
 	 * 采用栈 层级遍历树 有一点点困难
 	 * 最适宜的算法是采用 队列解决问题，如何理解这个问题
 	 * @param root
@@ -239,17 +241,20 @@ public class CustomTreeNode {
 			result.append(node.getValue() + ",");
 			if(node.getLeftNode() != null){
 				queue.offer(node.getLeftNode());
-			}
+			}	
+			
 			if(node.getRightNode() != null){
 				queue.offer(node.getRightNode());
 			}
 		}
+			
 		
 		return result.toString();
 	}
 	
 	/**
 	 * 采用递归的办法计算树的深度
+	 * 待实现的另一个算法实现 采用非递归的办法计算树的深度【学习任务】
 	 * @param root
 	 * @return
 	 */
