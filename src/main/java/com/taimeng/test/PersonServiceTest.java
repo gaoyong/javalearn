@@ -6,10 +6,10 @@ import com.taimeng.model.Person;
 import com.taimeng.service.PersonService;
 
 public class PersonServiceTest {
-	
-	
-	
-	
+
+
+
+
 	@Test
 	public void testSave(){
 		PersonService personService=new PersonService();

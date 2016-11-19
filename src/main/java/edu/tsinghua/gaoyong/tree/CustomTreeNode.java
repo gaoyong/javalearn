@@ -124,7 +124,7 @@ public class CustomTreeNode {
 	 * @return
 	 */
 	public String postOrderByStack(CustomTreeNode root){
-		LinkedList<CustomTreeNode> stack = new LinkedList<>();
+		LinkedList<CustomTreeNode> stack = new LinkedList<CustomTreeNode>();
 		StringBuffer result = new StringBuffer();
 		
 		CustomTreeNode lastPopNode = null;//记录上次出栈的元素
@@ -195,7 +195,7 @@ public class CustomTreeNode {
 	//先序遍历 是最好实现的 遍历树算法，后序遍历要难于先序
 	// 根 -->左子树 --> 右子树
 	public String inOrderByStack(CustomTreeNode root){
-		LinkedList<CustomTreeNode> stack = new LinkedList<>();
+		LinkedList<CustomTreeNode> stack = new LinkedList<CustomTreeNode>();
 		
 //		CustomTreeNode lastPopNode = null;//记录上次出栈的元素
 		stack.push(root);//根节点入栈
@@ -233,7 +233,7 @@ public class CustomTreeNode {
 	 */
 	public String layderOrderByQueue(CustomTreeNode root){
 		StringBuffer result = new StringBuffer();
-		LinkedList<CustomTreeNode> queue = new LinkedList<>();
+		LinkedList<CustomTreeNode> queue = new LinkedList<CustomTreeNode>();
 		queue.offer(root);//加入到队列的末尾
 		while(!queue.isEmpty()){//队列不为空
 			CustomTreeNode node = queue.poll();

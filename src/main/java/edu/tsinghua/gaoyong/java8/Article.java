@@ -33,7 +33,7 @@ public class Article {
     }
 
     public static void main(String[] args){
-    	List<Article> articleList = new ArrayList<>();
+    	List<Article> articleList = new ArrayList<Article>();
     	for(int i =0 ;i < 5;i++){
     		Article article = new Article("title"+i,"author"+i);
     		articleList.add(article);
@@ -41,9 +41,9 @@ public class Article {
     	
 //    	articleList.stream().findFirst();
     	
-    	articleList.stream()
-        .filter(article -> article.getTitle().contains("Java"))
-        .findFirst();
+//    	articleList.stream()
+//        .filter(article -> article.getTitle().contains("Java"))
+//        .findFirst();
     }
     
 }
