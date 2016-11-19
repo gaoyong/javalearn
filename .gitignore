@@ -1,6 +1,7 @@
 /build/
 /bin/
 .classpath
+.project
 *.iml
 .idea/*
 .gradle/**/**
