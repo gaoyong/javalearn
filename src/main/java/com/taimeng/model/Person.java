@@ -35,7 +35,11 @@ public class Person {
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + "]";
 	}
-	
-	
 
+	public Person() {}
+
+	public Person(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 }
