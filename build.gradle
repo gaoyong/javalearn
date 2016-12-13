@@ -38,7 +38,20 @@ dependencies {
     compile group: 'org.fusesource.stompjms', name: 'stompjms-client', version: '1.19'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version: '1.4.2.RELEASE'
     compile 'com.rabbitmq:amqp-client:3.6.6'
-    
+
+    // https://mvnrepository.com/artifact/com.squareup.okhttp/okhttp
+    compile group: 'com.squareup.okhttp', name: 'okhttp', version: '2.7.5'
+
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zipkin
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin', version: '1.1.0.RELEASE'
+
+    // https://mvnrepository.com/artifact/io.zipkin.brave/brave-spancollector-http
+    compile group: 'io.zipkin.brave', name: 'brave-spancollector-http', version: '3.9.1'
+
+    // https://mvnrepository.com/artifact/io.zipkin.brave/brave-core
+//    compile group: 'io.zipkin.brave', name: 'brave-core', version: '3.9.0'
+
+
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
 	compile('org.springframework.boot:spring-boot-starter-aop')
     compile('org.springframework.boot:spring-boot-starter-jdbc')
