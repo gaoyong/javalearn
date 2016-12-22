@@ -4,6 +4,7 @@
 //import com.github.kristofa.brave.EmptySpanCollectorMetricsHandler;
 //import com.github.kristofa.brave.Sampler;
 //import com.github.kristofa.brave.SpanCollector;
+//import com.github.kristofa.brave.http.HttpSpanCollector;
 //import com.squareup.okhttp.OkHttpClient;
 ////import com.github.kristofa.brave.http.DefaultSpanNameProvider;
 ////import com.github.kristofa.brave.http.HttpSpanCollector;
