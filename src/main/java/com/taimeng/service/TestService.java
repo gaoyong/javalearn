@@ -1,5 +1,6 @@
 package com.taimeng.service;
 
+import org.springframework.aop.framework.AopContext;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -18,10 +19,10 @@ public class TestService implements BeanSelfAware{
 
     @Cacheable(value = "test", key = "#root.target.DEMO_KEY.concat(#string.toString())")
     public String echoStr(String string){
-        System.out.println(" action : echonStr at" + new Date());
-        return proxySelf.echoStr2(string) + "-value";
-//        TestService proxy =  (TestService) (AopContext.currentProxy());
-//        return proxy.echoStr2(string) + "-value";
+//        System.out.println(" action : echonStr at" + new Date());
+//        return proxySelf.echoStr2(string) + "-value";
+        TestService proxy =  (TestService) (AopContext.currentProxy());
+        return proxy.echoStr2(string) + "-value";
     }
 
     @Cacheable(value = "test", key = "#root.target.DEMO_KEY2.concat(#string.toString())")
