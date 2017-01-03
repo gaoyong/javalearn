@@ -1,4 +1,10 @@
 # javalearn
-version:a
-version:b
-version:c
+## 实验特性
+
+- canal
+- zipken
+- solr
+
+## 待完善事项
+
+
